@@ -13,7 +13,7 @@ import { useRouter } from 'vue-router';
 const authStore = useAuthStore();
 const router = useRouter();
 
-const logout = async () => {
+const logout = () => {
   authStore.logout();
   router.push('/login');
 }

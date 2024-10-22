@@ -27,6 +27,12 @@ export const useAuthStore = defineStore('auth', {
       } catch (error) {
         console.error('Error:', error)
       }
+    },
+    logout() {
+      this.token = null
+      this.user = null
+      localStorage.removeItem('user')
+      localStorage.removeItem('token')
     }
   }
 })
